@@ -13,7 +13,11 @@ const protect = asyncHandler(async (req, res, next) => {
       // Get token from header
       token = req.headers.authorization.split(" ")[1];
 
+<<<<<<< HEAD
       // Verify token
+=======
+      // Verify the token
+>>>>>>> 0fa2499374a3e385d642ec392788f911ae64ab13
       const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
       // Get user from the token
@@ -29,7 +33,11 @@ const protect = asyncHandler(async (req, res, next) => {
 
   if (!token) {
     res.status(401);
+<<<<<<< HEAD
     throw new Error("Not authorized, no token");
+=======
+    throw new Error("Not authorized, No token");
+>>>>>>> 0fa2499374a3e385d642ec392788f911ae64ab13
   }
 });
 
