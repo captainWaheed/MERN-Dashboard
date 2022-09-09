@@ -5,10 +5,6 @@ const {
   loginUser,
   getMe,
 } = require("../controllers/userController");
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fa2499374a3e385d642ec392788f911ae64ab13
 const { protect } = require("../middleware/authMiddleware");
 
 router.post("/", registerUser);
