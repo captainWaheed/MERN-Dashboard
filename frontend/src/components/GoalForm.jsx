@@ -1,10 +1,8 @@
-import React from "react";
 import { useState } from "react";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { createGoal } from "../features/goals/goalSlice";
 
-const GoalForm = () => {
+function GoalForm() {
   const [text, setText] = useState("");
 
   const dispatch = useDispatch();
@@ -37,6 +35,6 @@ const GoalForm = () => {
       </form>
     </section>
   );
-};
+}
 
 export default GoalForm;

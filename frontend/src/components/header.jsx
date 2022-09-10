@@ -1,4 +1,3 @@
-import React from "react";
 import { FaSignInAlt, FaSignOutAlt, FaUser } from "react-icons/fa";
 import { Link, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -23,7 +22,7 @@ function Header() {
       <ul>
         {user ? (
           <li>
-            <button className="btn" onClick={onLogout()}>
+            <button className="btn" onClick={onLogout}>
               <FaSignOutAlt /> Logout
             </button>
           </li>

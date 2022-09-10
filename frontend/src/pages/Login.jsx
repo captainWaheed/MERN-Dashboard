@@ -1,6 +1,5 @@
-import React from "react";
-import { FaSignInAlt } from "react-icons/fa";
 import { useState, useEffect } from "react";
+import { FaSignInAlt } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -40,6 +39,7 @@ function Login() {
       [e.target.name]: e.target.value,
     }));
   };
+
   const onSubmit = (e) => {
     e.preventDefault();
 
@@ -54,6 +54,7 @@ function Login() {
   if (isLoading) {
     return <Spinner />;
   }
+
   return (
     <>
       <section className="heading">
@@ -62,6 +63,7 @@ function Login() {
         </h1>
         <p>Login and start setting goals</p>
       </section>
+
       <section className="form">
         <form onSubmit={onSubmit}>
           <div className="form-group">
@@ -82,7 +84,7 @@ function Login() {
               id="password"
               name="password"
               value={password}
-              placeholder="Enter your password"
+              placeholder="Enter password"
               onChange={onChange}
             />
           </div>
